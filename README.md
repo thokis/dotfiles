@@ -4,7 +4,7 @@ This repo represents my OpenBox dotfiles and some little scripts i wrote.
 To install this config of mine, simply copy the content of the repo directly into your home directory after modifying them.
 I also provied a applications.txt, containing all applications to run my scripts. Obviously if you dont have a nVidia gpu that supports h264 encode (h264_nvenc) dont install nvidia or nvidia-utils.
 
-## Alyways treat copying foreign files with caution! ##
+**Alyways treat copying foreign files with caution!**
 
 Begin by cd into your home directory and clone this repo
 
