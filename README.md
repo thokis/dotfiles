@@ -56,3 +56,7 @@ Keys.
 **lockscreen**
 
 ![picture alt](https://raw.githubusercontent.com/thokis/dotfiles/master/screens/.lock.jpg)
+
+## Wallpaper ##
+
+![picture alt](https://raw.githubusercontent.com/thokis/dotfiles/master/.config/wall.jpg)
