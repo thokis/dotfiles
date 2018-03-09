@@ -2,6 +2,7 @@
 
 This repo represents my OpenBox dotfiles and some little scripts i wrote.
 To install this config of mine, simply copy the content of the repo directly into your home directory after modifying them.
+I also provied a applications.txt, containing all applications to run my scripts. Obviously if you dont have a nVidia gpu that supports h264 encode (h264_nvenc) dont install nvidia or nvidia-utils.
 
 # Alyways treat copying foreign files with caution!
 
@@ -9,11 +10,11 @@ Begin by cd into your home directory and clone this repo
 
     $ cd ~
     $ git clone https://github.com/thokis/dotfiles.git .thokis_dotfiles
-    $ cd .thokis_dotfiles
+    $ cd .thokis_dotfiles/home_dir
     
 Now you should be able to edit the files in the .config and .script_dir directorys. After editing the files run
 
-    $ cp -r ~/.thokis_dotifles/* ~/
+    $ cp -r ~/.thokis_dotifles/home_dir/* ~/
     
 Now you should have a working Openbox config.
 
@@ -37,3 +38,7 @@ Lockscreen and suspend | Pause
 
 The Volume and cmus-remote scripts only work if you have multimediakeys on your keyboard and they are recognized as XF86Audio*
 Keys.
+
+# Screenshots
+
+Markup : ![picture alt]
