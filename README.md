@@ -59,4 +59,4 @@ Keys.
 
 ## Wallpaper ##
 
-![picture alt](https://raw.githubusercontent.com/thokis/dotfiles/master/.config/wall.jpg)
+![picture alt](https://raw.githubusercontent.com/thokis/dotfiles/master/home_dir/.config/wall.jpg)
