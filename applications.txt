@@ -1,5 +1,5 @@
-# These applications are necessary for the scripts to work.
-# Install only packages you need ^^
+# These applications are necessary for the scripts to work. #
+# Install only packages you need ^^ #
 
 feh
 vim
