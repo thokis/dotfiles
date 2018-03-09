@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ffmpeg -i $1 -vcodec copy -acodec copy -ss $2 -t $3 trimmed_$1

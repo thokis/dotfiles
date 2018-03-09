@@ -1,0 +1,4 @@
+#!/bin/bash
+
+import -quality 100 -window root -colorspace "sRGB" ~/.screenshot.jpg
+dunstify -r 3 "screenshot taken"

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+
+<menu id="root-menu" label="Openbox 3">
+  <separator label="apps" />
+<item label="terminal">
+    <action name="Execute">
+	<command>urxvt</command>
+      <startupnotify>
+      	      <enabled>yes</enabled>
+    </startupnotify>
+  </action>
+</item>
+
+<item label="dosbox">
+    <action name="Execute">
+	<command>dosbox</command>
+      <startupnotify>
+      	      <enabled>yes</enabled>
+    </startupnotify>
+  </action>
+</item>
+
+
+<item label="browser">
+    <action name="Execute">
+      <command>qutebrowser</command>
+      <startupnotify>
+      	      <enabled>yes</enabled>
+    </startupnotify>
+  </action>
+</item>
+
+<item label="gimp">
+    <action name="Execute">
+      <command>gimp</command>
+      <startupnotify>
+      	      <enabled>yes</enabled>
+    </startupnotify>
+  </action>
+</item>
+
+
+<item label="spotify">
+    <action name="Execute">
+      <command>spotify</command>
+      <startupnotify>
+      	      <enabled>yes</enabled>
+    </startupnotify>
+  </action>
+</item>
+
+<item label="music">
+    <action name="Execute">
+      <command>urxvt -e 'cmus'</command>
+      <startupnotify>
+      	      <enabled>yes</enabled>
+    </startupnotify>
+  </action>
+</item>
+<item label="files">
+    <action name="Execute">
+      <command>urxvt -e ranger</command>
+      <startupnotify>
+      	      <enabled>yes</enabled>
+    </startupnotify>
+  </action>
+</item>
+<item label="email">
+    <action name="Execute">
+      <command>urxvt -e neomutt</command>
+      <startupnotify>
+      	      <enabled>yes</enabled>
+    </startupnotify>
+  </action>
+</item>
+<separator label="sys" />
+<item label="audio">
+    <action name="Execute">
+	    <command>urxvt -e 'pulsemixer'</command>
+    </action>
+  </item>
+<item label="network">
+    <action name="Execute">
+      <command>urxvt -e 'nmtui'</command>
+    </action>
+  </item>
+  <item label="logout">
+    <action name="Exit">
+      <prompt>yes</prompt>
+    </action>
+  </item>
+<item label="shutdown">
+    <action name="Execute">
+      <command>systemctl poweroff</command>
+    </action>
+  </item>
+<item label="restart">
+    <action name="Execute">
+      <command>systemctl reboot</command>
+    </action>
+  </item>
+
+</menu>
+
+</openbox_menu>

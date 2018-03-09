@@ -1,0 +1,7 @@
+#!/bin/bash
+
+INPUT=$1
+OUTPUT=`echo $1 | cut -d "." -f "1-3"` 
+BITRATE=6000k
+
+ffmpeg -i $INPUT -c:v h264_nvenc -preset:v slow -b:v $BITRATE transcoded_$OUTPUT.mp4

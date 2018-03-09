@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ -z $1 ]
+then
+	echo "no argument provided"
+	exit 1
+else
+	man $1 | vim -
+fi

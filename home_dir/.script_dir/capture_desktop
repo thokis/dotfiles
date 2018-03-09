@@ -1,0 +1,41 @@
+#! /bin/bash
+
+CURRENT=`pwd`
+DATE=`date +%d.%m.%Y`
+TIME=`date +%H:%M:%S`
+FPS="60"
+RES="1920x1080"
+PRE="ultrafast"
+NVPRE="lossless"
+
+if [ ! -d "~/.capture" ]
+then
+	mkdir ~/.capture
+fi
+
+if [ -z "`pgrep ffmpeg`" ]
+then
+	cd ~/.capture
+	if [ "$1" == "libx264" ]
+	then
+		dunstify -r 2 "ffmpeg has started lossless libx264 recording"
+		ffmpeg -f pulse -ac 2 -i default -f:v x11grab -r $FPS -s $RES -i :0.0+0,0 -c:v libx264 -crf:v 0 -preset:v $PRE "libx264_$DATE-$TIME.mp4"
+	elif [ "$1" == "nvenc" ]
+	then
+		dunstify -r 2 "ffmpeg has started lossless nvenc recording"
+		ffmpeg -f pulse -ac 2 -i default -f:v x11grab -r $FPS -s $RES -i :0.0+0,0 -c:v h264_nvenc -preset:v $NVPRE "nvenc_$DATE-$TIME.mp4"
+	elif [ -z $1 ]
+	then
+		echo "no argument provided"
+		echo "use like this: capture_desktop [nvnec|libx264]"
+	else
+		echo "no valid argument provided: [$1]"
+		echo "use like this: capture_desktop [nvenc|libx264]"
+	fi
+	cd $CURRENT
+	exit 0
+else
+	echo "ffmpeg is already running"
+	dunstify -r 2 "ffmpeg is already running"
+	exit 1
+fi

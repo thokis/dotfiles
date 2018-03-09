@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if pgrep -x "cmus"
+then
+	cmus-remote -n
+	if [ `cmus-remote -Q | grep status | cut -b 8-` = playing ]
+	then
+		dunstify -r 1 "`cmus-remote -Q | grep -E 'tag title|tag album' | cut -c 11- | awk 'NR==1,NR==2'`"
+	fi
+	exit 0
+else
+	dunstify -u c -r 1 "cmus is not running"
+	exit 1
+fi

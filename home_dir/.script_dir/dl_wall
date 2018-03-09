@@ -1,0 +1,6 @@
+#!/bin/bash
+
+WALL=`xclip -sel clip -o`
+
+wget $WALL -O ~/.config/wall.jpg && feh --bg-fill ~/.config/wall.jpg
+exit 0

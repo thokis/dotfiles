@@ -1,0 +1,19 @@
+# These applications are necessary for the scripts to work.
+# Install only packages you need ^^
+
+feh
+vim
+python3
+rxvt-unicode
+wget
+rsync
+ponymix
+dmenu-xyw-mouse-msel
+dunst
+dunstify
+cmus
+ffmpeg
+nvidia
+nvidia-utils
+imagemagick
+i3lock-color

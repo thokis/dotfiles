@@ -1,0 +1,6 @@
+#!/bin/bash
+
+INPUT=$1
+OUTPUT=`echo $1 | cut -d "." -f "1-3"`
+
+ffmpeg -i $INPUT -c:v libx264 -preset veryslow -crf 22 transcoded_$OUTPUT.mp4

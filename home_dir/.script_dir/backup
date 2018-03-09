@@ -1,0 +1,40 @@
+#!/bin/bash
+
+DATE=`date +%m.%d.%y`
+
+if [ -z "$1" ]
+then
+	echo "this script saves/restores your homedirectory"
+	echo "no arguments supplied"
+	echo "select one of the two arguemnts :"
+	echo "save => clones the current users home directory to backup location"
+	echo "restore => restores the current users home directory from backup location"
+	exit 1
+fi
+
+if [ -z "$2" ]
+then
+	echo "no backup path was given"
+	echo "example : backup save /mnt/..."
+	exit 1
+fi
+if [ $1 = "save" ]
+then
+	mkdir -p $2/backup/home/$USER
+	rsync -aAXv --exclude={".cache","Downloads"} /home/$USER $2/backup/home
+	echo $DATE > $2/backup/home/$USER/.last_backup.txt
+	echo $DATE > /home/$USER/.last_backup.txt
+	echo "backup finished"
+	exit 1
+fi
+if [ $1 = "restore" ]
+then
+	rsync -aAxv $2/backup/home/$USER /home
+	echo "backup restored"
+	exit 1
+fi
+echo 'invalid argument "'$1'" supplied'
+echo "select one of the two arguemnts :"
+echo "save => clones the current users home directory to backup location"
+echo "restore => restores the current users home directory from backup location"
+exit 1

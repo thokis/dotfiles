@@ -1,0 +1,6 @@
+#!/bin/bash
+
+import -quality 100 -window root -colorspace "sRGB" ~/.lock.jpg
+convert -blur 0x4 ~/.lock.jpg ~/.lock.jpg
+composite -quality 100 ~/.config/combine.png ~/.lock.jpg ~/.lock.jpg
+i3lock -u -i ~/.lock.jpg

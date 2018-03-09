@@ -1,0 +1,38 @@
+#!/bin/bash
+
+#depends on : ponymix dunstify
+
+if [ "$1" == "inc" ]
+then
+	ponymix increase 5
+	dunstify -r 1 "volume : `ponymix get-volume`"
+	exit 0
+elif [ "$1" == "dec" ]
+then
+	ponymix decrease 5
+	dunstify -r 1 "volume : `ponymix get-volume`"
+	exit 0
+elif [ "$1" == "mute" ]
+then
+	ponymix toggle
+	if ponymix | grep -q Muted
+	then
+		dunstify -r 1 "volume : muted"
+		exit 0
+	else
+		dunstify -r 1 "volume : `ponymix get-volume`"
+		exit 0
+	fi
+elif [ "$1" == "help" ]
+then
+	echo "use like this: vol [inc|dec|mute]"
+	exit 1
+elif [ -z $1 ]
+then
+	echo "no argument provided"
+	echo "use like this: vol [inc|dec|mute]"
+else
+	echo "no valid argument provided"
+	echo "use like this: vol [inc|dec|mute]"
+	exit 1
+fi

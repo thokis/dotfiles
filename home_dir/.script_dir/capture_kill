@@ -1,0 +1,4 @@
+#!/bin/bash
+
+pkill -15 ffmpeg &
+dunstify -r 2 "ffmpeg has stopped recording"

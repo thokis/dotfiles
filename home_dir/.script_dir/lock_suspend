@@ -1,0 +1,4 @@
+#!/bin/bash
+
+lock_screen
+systemctl suspend
