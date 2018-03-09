@@ -1,4 +1,5 @@
-# dotfiles
+# Openbox config and some scripts
+
 This repo represents my OpenBox dotfiles and some little scripts i wrote.
 To install this config of mine, simply copy the content of the repo directly into your home directory after modifying them.
 
