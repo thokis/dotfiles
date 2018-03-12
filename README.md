@@ -14,7 +14,7 @@ Begin by cd into your home directory and clone this repo
     
 Now you should be able to edit the files in the .config and .script_dir directorys. After editing the files run
 
-    $ cp -r ~/.thokis_dotifles/home_dir/* ~/
+    $ cp -r ~/.thokis_dotifles/home_dir/.* ~/
     
 Now you should have a working Openbox config.
 
